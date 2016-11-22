@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>javascript对象 | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="因为经常忘记这一些理论原理的概念，所以手写在了本子上，但是发现还是会忘记，所以这次索性就写在了hexo博客中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript对象">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2016/11/21/javascript对象/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="因为经常忘记这一些理论原理的概念，所以手写在了本子上，但是发现还是会忘记，所以这次索性就写在了hexo博客中">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk1.jpg">
+<meta property="og:updated_time" content="2016-11-21T09:47:01.526Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript对象">
+<meta name="twitter:description" content="因为经常忘记这一些理论原理的概念，所以手写在了本子上，但是发现还是会忘记，所以这次索性就写在了hexo博客中">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk1.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">zhou</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">zhou</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">zhou</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-javascript对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk1.jpg" alt="img"><br>因为经常忘记这一些理论原理的概念，所以手写在了本子上，但是发现还是会忘记，所以这次索性就写在了hexo博客中<br><a id="more"></a></p>
+<h3 id="js类"><a href="#js类" class="headerlink" title="js类"></a><strong>js类</strong></h3><p>  类是一种抽象，我们没办法操作它的属性和方法，只能通过实例化来化为一个对象。在js的语法中，是没有类这种概念，但是在es6中，类是可以直接定义的。而在es5中，传统的就是用构造函数的方法创建一个类。</p>
+<h3 id="js构造函数"><a href="#js构造函数" class="headerlink" title="js构造函数"></a><strong>js构造函数</strong></h3><pre><code>构造函数主要是在初始化对象的时候为对象赋值成员变量的初始值，与new一起使用在创建对象的语句中。例如
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">构造函数的函数名保证第一个字母为大写，更清晰的让人知道表示的是“类”</div><div class="line">function Car(color,money)&#123;</div><div class="line">	this.color=color;</div><div class="line">	this.money=money;</div><div class="line">	this.run=function()&#123;</div><div class="line">		console.log(&apos;this car colro is:&apos;+this.color);</div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h3 id="js实例化对象"><a href="#js实例化对象" class="headerlink" title="js实例化对象"></a><strong>js实例化对象</strong></h3><pre><code>实例化对象只要就是将类给具体化成一个对象，这个过程就是实例化
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var car1=new Car(&apos;red&apos;,&apos;300000&apos;);</div><div class="line">此处的car1就是Car类的实例化对象,传入了两个参数，一个是red,一个是300000，这样就能被类定义好的参数接收</div><div class="line">car1.run();</div><div class="line">返回的就是这个实例化了的对象的run方法</div></pre></td></tr></table></figure>
+</code></pre><h3 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a><strong>js对象</strong></h3><pre><code>上面所new出来的car1就是一个对象，对象拥有属性和方法，也就是说对象是一个数据(变量);
+属性是与对象相关的值;
+方法是能够在对象上执行的动作;
+</code></pre><h3 id="js对象的继承"><a href="#js对象的继承" class="headerlink" title="js对象的继承"></a><strong>js对象的继承</strong></h3><pre><code>其实上面所说的都是基于js的原型链 prototype 来实现，每个构造函数都拥有一个prototype对象，所有实例的对象需要共享的方法和属性都放在prototype里面，而不共享的放在构造函数里面。
+</code></pre><h4 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a><strong>prototype</strong></h4><pre><code>为Cat构造函数添加一个公共共享的属性和方法
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Car.prototype.name=&quot;车&quot;;</div><div class="line">Car.prototype.start=function()&#123;</div><div class="line">	console.log(&apos;this&apos;+this.color+this.name+&apos;开动了&apos;);</div><div class="line">&#125;</div><div class="line">打印出这个对象的所有属性,不包括方法</div><div class="line">for(var i in cat1)&#123;</div><div class="line">	if(typeof cat[i] !=&apos;function&apos;)&#123;</div><div class="line">		console.log(&apos;cart1[&apos;+i+&apos;]=&apos;+car1[i]);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><h4 id="关于prototype的判断"><a href="#关于prototype的判断" class="headerlink" title="关于prototype的判断"></a><strong>关于prototype的判断</strong></h4><pre><code>isPrototypeOf()
+判断某个prototype对象和某个实例对象之间的关系
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Car.prototype.isPrototypeOf(car1);</div></pre></td></tr></table></figure>
+
+hasOwnProperty()
+每个实例的对象都有一个hasOwnProperty()的方法，用来判断某一个属性是本地属性还是继承自prototype的对象属性
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">car1.hasOwnProperty(&apos;某个属性名&apos;)</div></pre></td></tr></table></figure>
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/21/javascript对象/" class="archive-article-date">
+  	<time datetime="2016-11-21T08:15:10.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-21</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/21/超级皮毛未完篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nodejs超级皮毛未完篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 zhou
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
