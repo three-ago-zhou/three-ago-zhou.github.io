@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="周三岁">
 <meta property="og:description" content="因为经常忘记这一些理论原理的概念，所以手写在了本子上，但是发现还是会忘记，所以这次索性就写在了hexo博客中">
 <meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk1.jpg">
-<meta property="og:updated_time" content="2016-11-21T09:47:01.526Z">
+<meta property="og:updated_time" content="2016-11-23T03:53:13.636Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript对象">
 <meta name="twitter:description" content="因为经常忘记这一些理论原理的概念，所以手写在了本子上，但是发现还是会忘记，所以这次索性就写在了hexo博客中">
@@ -42,7 +42,7 @@
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">zhou</a></h1>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
 		</hgroup>
 
 		
@@ -85,7 +85,7 @@
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"><i class="icon-list"></i></div>
-  		<h1 class="header-author js-mobile-header hide">zhou</h1>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -95,7 +95,7 @@
 				
 			</div>
 			<hgroup>
-			  <h1 class="header-author">zhou</h1>
+			  <h1 class="header-author">渣端</h1>
 			</hgroup>
 			
 			<p class="header-subtitle">一个来自渣端的博客</p>
@@ -151,11 +151,26 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Car.prototype.name=&quot;车&quot;;</div><div class="line">Car.prototype.start=function()&#123;</div><div class="line">	console.log(&apos;this&apos;+this.color+this.name+&apos;开动了&apos;);</div><div class="line">&#125;</div><div class="line">打印出这个对象的所有属性,不包括方法</div><div class="line">for(var i in cat1)&#123;</div><div class="line">	if(typeof cat[i] !=&apos;function&apos;)&#123;</div><div class="line">		console.log(&apos;cart1[&apos;+i+&apos;]=&apos;+car1[i]);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </code></pre><h4 id="关于prototype的判断"><a href="#关于prototype的判断" class="headerlink" title="关于prototype的判断"></a><strong>关于prototype的判断</strong></h4><pre><code>isPrototypeOf()
 判断某个prototype对象和某个实例对象之间的关系
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Car.prototype.isPrototypeOf(car1);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Car.prototype.isPrototypeOf(car1);</div><div class="line">hasOwnProperty()</div><div class="line">每个实例的对象都有一个hasOwnProperty()的方法，用来判断某一个属性是本地属性还是继承自prototype的对象属性</div><div class="line">car1.hasOwnProperty(&apos;某个属性名&apos;)</div></pre></td></tr></table></figure>
+</code></pre><h3 id="js对象基础皮毛"><a href="#js对象基础皮毛" class="headerlink" title="js对象基础皮毛"></a><strong>js对象基础皮毛</strong></h3><pre><code>对象分为三种类型对象
+</code></pre><h4 id="1-内部对象"><a href="#1-内部对象" class="headerlink" title="1.内部对象"></a><strong>1.内部对象</strong></h4><pre><code>：Array(数组),Date(时间),Number(数字),Math(随机数)...
+这些对象类型需要new出来才可以使用，或者定义出来.但是Math,Global则被称为js的内置对象，在js中程序初始化的是时候就已经被创建好了。不需要实例化就能够使用。
+</code></pre><h4 id="2-宿主对象"><a href="#2-宿主对象" class="headerlink" title="2.宿主对象"></a><strong>2.宿主对象</strong></h4><pre><code>：对于嵌入在网页浏览器的js来说，其宿主就是浏览器提供的对象，所以被称为浏览器对象。
+浏览器对象：window和document.这就是BOM的方法和属性。
+所有的浏览器都支持window对象，所有的全局对象，属性，方法都被自动挂在window对象下，成为window的成员。
+变量是window对象的属性，函数是window对象下的方法。
+</code></pre><h4 id="BOM和DOM"><a href="#BOM和DOM" class="headerlink" title="BOM和DOM"></a><strong>BOM和DOM</strong></h4><pre><code>BOM是浏览器对象模型提供了独立于内容和窗口进行交互的对象，而HTML的DOM的document也是window对象的属性之一(documeng.getElementById()是window.document.getElmentById()的缩写。window下的属性可以把window不写出来，因为默认是window下的属性。)
 
-hasOwnProperty()
-每个实例的对象都有一个hasOwnProperty()的方法，用来判断某一个属性是本地属性还是继承自prototype的对象属性
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">car1.hasOwnProperty(&apos;某个属性名&apos;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">window是核心在其下面有几个内置好的对象</div><div class="line">	1.frames[]：返回了窗口中所有命名的框架。</div><div class="line">	2.history：记录了用户浏览过的网页。</div><div class="line">	3.location：用于网页跳转</div><div class="line">	4.navigator：描述了当前浏览器的一切属性和环境(可以查看当前浏览器的版本和内置核等等作用)</div><div class="line">	5.screen：当前窗口的属性(窗口的宽高等等)</div><div class="line">	...</div></pre></td></tr></table></figure>
+
+DOM是W3C的标准，是HTML对象模型的缩写。DOM可以访问所有HTML的元素，因为HTML整个是一个DOM树，包括了文本，节点，节点属性等等全部的可以访问到(在此有一个坑，就是在DOM下，一个空格或者一个换行符都被当作一个DOM的子节点),DOM是独立于平台和编程的语言，可以被java,js,vbscript使用。
+</code></pre><h4 id="3-自定义对象"><a href="#3-自定义对象" class="headerlink" title="3.自定义对象"></a><strong>3.自定义对象</strong></h4><pre><code>就是开发人员自己定义的对象
+</code></pre><h4 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a><strong>动态原型模式</strong></h4><pre><code>最实用的就是构造函数与原型组合模式，被称为动态原型模式
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">例如：</div><div class="line">	function Person(name,age)&#123;</div><div class="line">		//此此处判断是否已经创建了sayName这个函数,如果没用的话，就是!=fanction，然后进入动态创建一个</div><div class="line">		if(typeof sayName!=&apos;function&apos;)&#123; </div><div class="line">			Person.prototype=&#123;</div><div class="line">				//此处constructor就是前面所讲的将当前的peototype指向自己本身Person</div><div class="line">				constructor:Person, </div><div class="line">				sayName:function()&#123;</div><div class="line">					console.log(this.name);</div><div class="line">				&#125;</div><div class="line">			&#125;;</div><div class="line">			这里需要返回出一个new好的实例(这里不知道怎么描述，可能描述的不准确，sorry)</div><div class="line">			return new Person(name,age);</div><div class="line">		&#125;  </div><div class="line">		this.name=name;</div><div class="line">		this.age=age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	var p1=new Person(&apos;zhou&apos;,&apos;22&apos;);</div><div class="line">	p1.sayName();</div></pre></td></tr></table></figure>
+</code></pre><h3 id="proto和prototype的区别"><a href="#proto和prototype的区别" class="headerlink" title="proto和prototype的区别"></a><strong><strong>proto</strong>和prototype的区别</strong></h3><pre><code>__proto__是每个对象都有的一个属性，它指向的是当前对象的原型对象.
+prototype是函数才会有的属性，它指向的是以当前函数作为构造函数的实例出来的对象的原型对象。
+</code></pre><h3 id="对象字面量"><a href="#对象字面量" class="headerlink" title="对象字面量"></a><strong>对象字面量</strong></h3><pre><code>直接用赋值语句加花括号创建出来的对象(var o={name:&apos;zhou&apos;,age:22})，对象字面量的__proto__属性指向的是object.prototype。
+</code></pre><h3 id="暂时就总结到到这"><a href="#暂时就总结到到这" class="headerlink" title="暂时就总结到到这"></a><strong>暂时就总结到到这</strong></h3><pre><code>有很多东西其实我本人都没有弄得很明白，大概就了解一点皮毛吧，可能有些东西说错，之后的话，我更深入理解的时候会回来修改或者更新内容;
 </code></pre>
       
     </div>
@@ -217,7 +232,7 @@ hasOwnProperty()
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2016 zhou
+    		&copy; 2016 渣端
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
