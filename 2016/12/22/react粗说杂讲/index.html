@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>React粗说杂讲 | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="时下最流行的几个框架，无非就是vue.js,React.js,angular.js…但是最近的情况是各种angular项目开始迁移向了vue或者react..我只是在今年夏天的时候粗略的用angular配合nodejs搭建过一些小的demo.，vue.js还没有看过，没有玩过。React.js看了几天的基础，想要写出来做个记忆。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React粗说杂讲">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2016/12/22/react粗说杂讲/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="时下最流行的几个框架，无非就是vue.js,React.js,angular.js…但是最近的情况是各种angular项目开始迁移向了vue或者react..我只是在今年夏天的时候粗略的用angular配合nodejs搭建过一些小的demo.，vue.js还没有看过，没有玩过。React.js看了几天的基础，想要写出来做个记忆。">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk6.jpg">
+<meta property="og:updated_time" content="2016-12-22T12:29:54.777Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React粗说杂讲">
+<meta name="twitter:description" content="时下最流行的几个框架，无非就是vue.js,React.js,angular.js…但是最近的情况是各种angular项目开始迁移向了vue或者react..我只是在今年夏天的时候粗略的用angular配合nodejs搭建过一些小的demo.，vue.js还没有看过，没有玩过。React.js看了几天的基础，想要写出来做个记忆。">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk6.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">渣端</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-react粗说杂讲" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      React粗说杂讲
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk6.jpg" alt="img"><br>时下最流行的几个框架，无非就是vue.js,React.js,angular.js…但是最近的情况是各种angular项目开始迁移向了vue或者react..我只是在今年夏天的时候粗略的用angular配合nodejs搭建过一些小的demo.，vue.js还没有看过，没有玩过。React.js看了几天的基础，想要写出来做个记忆。<br><a id="more"></a></p>
+<h3 id="关于前端"><a href="#关于前端" class="headerlink" title="关于前端"></a>关于前端</h3><p>首先得说说前端，不得不说现在前端的定义实在是太让人模糊了。做静态页面的被称为前端，做js小游戏的被称为前端，做h5的被称为前端，会框架会后台的也被称为前端。所以，每一家公司对前端的意见都是不同的，取决于他们的leader是否够”潮”。如果技术团队底蕴深厚的公司，那他们的前端肯定会前后端交互，会撸框架，会搭架子，会调用微信或者支付宝jsAPI等等等等，当然静态页面是基本功，老本行。所以这样的前端才能称得上是真正的前端。在这个前端烂大街的年代，在这个前端是程序员中底层链的存在，在这个前端技术日新月异，在这个前端开始爆发的年代，你不会几个框架，你不会撸一手好原生，你不会搞一波手机、PC、ipad、各类系统移动端的一套代码响应所有东西的话，迟早得死在这个行业。所以唯有不断的学习，唯有不断的充实，才能在这个IT界存活下来。如果单纯的只是想做一个静态页面的前端的话，回家开小卖部去吧。</p>
+<h3 id="关于React"><a href="#关于React" class="headerlink" title="关于React"></a>关于React</h3><p>这个框架这两年已经是爆发的不得了，可以说是前端不识React，不如回家种红薯。首先React的撑腰者是facebook这么屌的公司就可以让人用的放心了。React.Native更加是屌的一逼，号称统治三界，不，是三端。这个是后话，今天先撸React。<br>React可以说是刚接触起来的话比较绕，但是多敲了几遍Demo之后，马上就理清里面的写法跟逻辑。</p>
+<h3 id="React语法"><a href="#React语法" class="headerlink" title="React语法"></a>React语法</h3><p>首先script的类型必须是type=”text/label”，因为其中用的是JSX的语法，然后再进行编译渲染。然后再使用ReactDOM.render();将模版转换成HTML代码。<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script type=&quot;text/label&quot;&gt;</div><div class="line">	ReactDOM.render(</div><div class="line">		&lt;h1&gt;Hello,world&lt;/h1&gt;,</div><div class="line">		document.getElementById(&apos;example&apos;)</div><div class="line">	);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>这段代码就会将render里面的h1，转换加载到了”id=example”的div当中。要注意的是React的语法非常的严肃，该有逗号的地方要有逗号，不该有冒号的地方不能有冒号，不然会报错。<br>React的JSX允许在当中有js和HTML,js使用{}来写，碰到HTML可以用&lt;&gt;来表示。<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var arr=[</div><div class="line">	&lt;h1&gt;hello&lt;/h1&gt;,</div><div class="line">	&lt;h1&gt;world&lt;/h1&gt;</div><div class="line">];</div><div class="line">ReactDOM.render(</div><div class="line">	&lt;div&gt;&#123;arr&#125;&lt;/div&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>这段代码中的数组arr在React中会自动展开里面所有的子元素，然后注意渲染。<br>然后在看看最会绕晕刚入坑的组件,最简单的。<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var HelloWorld=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		return &lt;h1&gt;hello,World!&lt;/h1&gt;</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">	&lt;HelloWorld /&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>对了，在这里要多嘴一句，React中推荐，渲染组件的话命名第一个字母为大写，渲染THML元素的话命名第一个字母为小写。<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var myDiv=&lt;div className=&quot;classcss&quot;&gt;;</div><div class="line">ReacteDOM.render(myDiv,document.getElementById(&apos;example&apos;));</div></pre></td></tr></table></figure></p>
+<p>在JSX的语法中，HTML标签中不允许出现class，只能用className来定义class名字，这样子才能渲染出来。<br>行内样式的写法又该如何来写呢？例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var myStyle=&#123;</div><div class="line">	width:&apos;100&apos;,</div><div class="line">	height:&apos;100&apos;,</div><div class="line">	background:&apos;red&apos;</div><div class="line">&#125;;</div><div class="line">ReactDOM.render(</div><div class="line">	&lt;div&gt;</div><div class="line">		&lt;h1&gt;这是react&lt;/h1&gt;</div><div class="line">		&lt;div style=&#123;myStyle&#125;&gt;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>一定要注意里面的写法，语句的严谨。在样式里面的设置是对象里面的键值对存在，省略的px会在渲染是自动补齐。<br>React的属性传值<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var HelloWorld=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		renturn &lt;h1&gt;Hello,&#123;this.props.world&#125;&lt;/h1&gt;</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">	&lt;HelloWorld world=&quot;World&quot; /&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>有没有发现这样的写法有些熟悉，讲的粗俗点是不是就像是函数互相调用，函数互相引用，事件委托的机制？{this.props.world}指向的就是最后生成时的world的值。这个应该看懂并不难吧。<br>我们在看看React 的混合组件<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var MyInfo=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		return(</div><div class="line">			&lt;div&gt;</div><div class="line">				&lt;Name name=&#123;this.props.name&#125; /&gt;</div><div class="line">				&lt;Age age=&#123;this.props.age&#125;/&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var Name=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		return (</div><div class="line">			&lt;h1&gt;&#123;this.props.name&#125;&lt;/h1&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var Age=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		return(</div><div class="line">			&lt;h2&gt;&#123;this.props.age&#125;&lt;/h2&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">	&lt;MyInfo name=&quot;zhousansui&quot; age=&quot;3&quot; /&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>这套组件下来可能会让刚入坑的直接就懵逼的，但是我们梳理一遍就知道是怎么回事了。首先MyInfo当中创建渲染了<name>和<age>,并且当中定义的属性已经用{this.props.xx}来引用好了，而且下面分别创建好了Name和Age，在模版里面将属性放入了h1和h2标签中，最后REACTdom.render调用了MyInfo，并且输入了属性name和age两个，然后接下来就是组件的互相调用，各自渲染了。可能我描述的不是很好，因为这东西只能说是只可意会了。<br>接下来我们再看看React State的状态<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var LinkButton=React.createClass(&#123;</div><div class="line">	getInitialState:function()&#123;</div><div class="line">		return&#123;linked:false&#125;;</div><div class="line">	&#125;,</div><div class="line">	handleClick:function()&#123;</div><div class="line">		this.setState(&#123;linked:!this.state.liked&#125;);</div><div class="line">	&#125;,</div><div class="line">	render:function()&#123;</div><div class="line">		var text=this.state.liked?&apos;FALSE&apos;:&apos;TRUE&apos;;</div><div class="line">		return (</div><div class="line">			&lt;p onClick=&#123;this.handleClick&#125;&gt;</div><div class="line">				点击后状态state为&lt;b&gt;&#123;text&#125;&lt;/b&gt;	</div><div class="line">			&lt;/p&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">React.render(</div><div class="line">	&lt;LinkButton /&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></age></name></p>
+<p>此处里面的getInitialState是设置初始属性或者初始状态用的，而handleClick只是一个事件，这段代码是不是能够看明白很多，我所说的像函数调用的那种意思？<br>再看看稍微复杂点的React props和state的混合使用<br>例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">var WebSite=Reacte.createClass(&#123;</div><div class="line">	getInitialState:function()&#123;</div><div class="line">		return&#123;</div><div class="line">			name:&apos;zhousansui&apos;,</div><div class="line">			site:&apos;https://three-ago-zhou.github.io/&apos;</div><div class="line">		&#125;;</div><div class="line">	&#125;,</div><div class="line">	render:function()&#123;</div><div class="line">		return(</div><div class="line">			&lt;div&gt;</div><div class="line">				&lt;Name name=&#123;this.state.name&#125; /&gt;</div><div class="line">				&lt;Link site=&#123;this.state.site&#125; /&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var Name=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		return(</div><div class="line">			&lt;h1&gt;&#123;this.props.name&#125;&lt;/h1&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var Link=React.createClass(&#123;</div><div class="line">	render:function()&#123;</div><div class="line">		return(</div><div class="line">			&lt;a href=&#123;this.props.site&#125;&gt;周三岁的博客&lt;/a&gt;</div><div class="line">		);</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">	&lt;WebSite /&gt;,</div><div class="line">	document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>其实这段代码也是非常的简单，先是在WebSite中定义好静态的属性name和site，然后render渲染已经创建好的Name和Age组件，所以最后ReactDOM.render中只需要调用<website>就渲染出来了。</website></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>最后说一下，其实这些真的不难，我上面说的只是最基础的一些语法和方法API，还有很多的状态API和写法，这只是我初步弄懂的一小部分，还有很多需要学习，React的套件也是非常的多，需要花上几个月的时间来学。现在真正的大公司的前端要求，nodejs+react(vue,angular)可以说是低配了，好好比对下自己吧，任重而道远。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/22/react粗说杂讲/" class="archive-article-date">
+  	<time datetime="2016-12-22T10:56:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-22</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/15/关于html-css-div布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于html css DIV布局</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 渣端
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
