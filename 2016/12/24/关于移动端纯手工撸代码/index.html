@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>关于移动端纯手工撸代码 | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作为一个敲原生js和原生css布局页面了很久的渣端，对于页面布局还是小有体会的，能够纯手工撸出一套css同时兼容PC，ipad，不同屏幕大小的移动端。所以，今天写出一点点的小心得。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于移动端纯手工撸代码">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2016/12/24/关于移动端纯手工撸代码/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="作为一个敲原生js和原生css布局页面了很久的渣端，对于页面布局还是小有体会的，能够纯手工撸出一套css同时兼容PC，ipad，不同屏幕大小的移动端。所以，今天写出一点点的小心得。">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk7.jpg">
+<meta property="og:updated_time" content="2016-12-24T04:40:30.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于移动端纯手工撸代码">
+<meta name="twitter:description" content="作为一个敲原生js和原生css布局页面了很久的渣端，对于页面布局还是小有体会的，能够纯手工撸出一套css同时兼容PC，ipad，不同屏幕大小的移动端。所以，今天写出一点点的小心得。">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk7.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">渣端</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-关于移动端纯手工撸代码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于移动端纯手工撸代码
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk7.jpg" alt="img"><br>作为一个敲原生js和原生css布局页面了很久的渣端，对于页面布局还是小有体会的，能够纯手工撸出一套css同时兼容PC，ipad，不同屏幕大小的移动端。所以，今天写出一点点的小心得。<br><a id="more"></a></p>
+<h3 id="关于css编写"><a href="#关于css编写" class="headerlink" title="关于css编写"></a>关于css编写</h3><p>CSS作为一门语言，也是有着傲娇的。跟着html语言互相配合，互相升级。假如全世界的IE10以下的浏览器再也不需要考虑的话，那CSS发挥出来的力量将是足以让人感到震撼的。例如animation(动画)，box-sizing(盒子模型)，filter(滤镜)，@meadia(响应式)….还有很多让人耳目一新的新技术的出现，无疑是让页面布局更加的快速，更加的漂亮。</p>
+<h3 id="关于公共样式"><a href="#关于公共样式" class="headerlink" title="关于公共样式"></a>关于公共样式</h3><p>做Web端开发的总会发现，页面之间总是会存在公共的样式，例如头部，尾部，按钮，文字，链接等等。而我的习惯总是会创建一个puclic.css文件来编写这个公共的样式，先是给所有的页面消除一些默认的样式，例如放入一段这样的css<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">	padding: 0px;</div><div class="line">	margin: 0px;</div><div class="line">	text-decoration: none;</div><div class="line">	list-style-type: none;</div><div class="line">	outline:none;</div><div class="line">	letter-spacing:1px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>，而且公共的样式命名总是以public开头，例如public_header,public_footer,public_btn,public_a等等，这样让后人看你的样式代码无疑会舒服很多，切记命名的时候一定要按照规范，要么是驼峰命名，要么是我这样的命名，而且名字规则尽量不要使用拼音，更不要使用拼音的第一个字母的组合，让人感觉low，我一般性看到这样的命名肯定会觉得他是个傻逼！</p>
+<h3 id="关于兼容性的动画效果"><a href="#关于兼容性的动画效果" class="headerlink" title="关于兼容性的动画效果"></a>关于兼容性的动画效果</h3><p>在此先问候一下ie全家，然后在问候一下要求兼容ie8的产品的老板全家，接着在问候一下默认给电脑专ie浏览器的电脑店的全家，然后开始步入正题。对于前端来说，ie的存在绝对是反人类的，大家都好好的遵守w3c的标准，就他妈的你有性格！自己不遵守，然后中华大地偏偏还存留着大部分的ie8的用户。在我刚做前端不久进入一家外包公司的时候，可以说是边擦着泪，边调IE的兼容性。一般性做一个Web站，同时开着chrome,firefox,360,ie慢慢的看着页面效果，慢慢的打着代码。当我撸完css的时候，满怀信心的完工的时候，js又不兼容了，当然js兼容这是后话，留着下一篇写。不过对于css3里面的部分动画，如果要考虑到ie8的话，我只能说小伙子，含泪用Js来写动画吧。首先，简单的部分动画还是能够做出来的，如果你的Js功底太烂的话，一般性用个jquery的库就能够完美的呈现出来。但是相比之下，你写了一大段的动画js,如果用css动画来写的话，往往只要那么几行就能够呈现。这就是css的魅力所在了。</p>
+<h3 id="关于移动端的响应式写法"><a href="#关于移动端的响应式写法" class="headerlink" title="关于移动端的响应式写法"></a>关于移动端的响应式写法</h3><p>在我做了一大堆的移动端Web站之后，有在微信显示的，有直接用手机浏览器显示的，有要求在ipad显示的，千万种实践之后，深感rem确实是神器的存在，有兴趣的同学可以看看bootstrap框架所用的流式布局就是用rem标签，然后在定义一大堆各个屏幕下的分辨率，像我最近的一个微信端的项目，就用了几个分辨率，可能不是那么精准，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">@media screen and (min-width:320px)&#123;</div><div class="line">	html&#123;font-size:14px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:360px)&#123;</div><div class="line">	html&#123;font-size:14px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:400px)&#123;</div><div class="line">	html&#123;font-size:14px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:440px)&#123;</div><div class="line">	html&#123;font-size:16px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:500px)&#123;</div><div class="line">	html&#123;font-size:22px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:640px)&#123;</div><div class="line">	html&#123;font-size:24px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:766px)&#123;</div><div class="line">	html&#123;font-size:24px&#125;</div><div class="line">&#125;</div><div class="line">@media screen and (min-width:1020px)&#123;</div><div class="line">	html&#123;font-size:24px&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这些我小小的测过，在ipad端，手机端，各种分辨率下，横屏or竖屏都能够很好的展示效果，但是可能存在一点点的小问题，需要看实际项目在进行单独的调整，这个也是必须存在public.css里面的。<br>你以为CSS写完这些，就是响应式了吗？骚年，你太年轻了，在html页面的head投不中，你也必须定义一行东西，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; charset=&quot;utf-8&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>我曾经忘记在页面中写这一行定义，然后还是纯手撸出了移动端的响应式..但是，你会发现点击input框的时候，页面有个焦距的感觉，然后我仔细的看了看页面，才忘记将这个写上去。然后花了几个小时，将页面给调整了回来，想打死自己的心都有。</p>
+<h3 id="关于css的一些干货和一些建议"><a href="#关于css的一些干货和一些建议" class="headerlink" title="关于css的一些干货和一些建议"></a>关于css的一些干货和一些建议</h3><p>对于手机端，乃至于pc端来说，在使用一些块元素的时候，会包含许多的子元素的时候，我建议多使用CSS中的overflow:hidden。但是使用这个的时候，不能定义高度，你可以定义宽度，不然的话，你的元素就真的被hidden掉了。而且在父元素内的子元素都是浮动的情况下，overflow:hidden 能够将这些子元素依旧包含住。<br>在此贴上我使用很频繁的一些css吧，已经写了hack兼容浏览器，需要的话，可以直接复制黏贴走，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">单行溢出省略</div><div class="line">white-space:nowrap;</div><div class="line">   overflow:hidden;</div><div class="line">   -o-text-overflow: ellipsis; /* for Opera */ </div><div class="line">   text-overflow:ellipsis; /* for IE */ </div><div class="line"></div><div class="line">多行文本换行溢出省略</div><div class="line">overflow : hidden;</div><div class="line">text-overflow: ellipsis;</div><div class="line">display: -webkit-box;</div><div class="line">-webkit-line-clamp: 2;</div><div class="line">-webkit-box-orient: vertical;</div><div class="line"></div><div class="line">背景半透明</div><div class="line">background: rgba(0,0,0,0.3); /*支持rgba的浏览器*/</div><div class="line">background: black/9;</div><div class="line">filter:alpha(opacity=50)/9;</div><div class="line"></div><div class="line">盒子模型</div><div class="line">-moz-box-sizing: border-box; /*Firefox3.5+*/</div><div class="line">-webkit-box-sizing: border-box; /*Safari3.2+*/</div><div class="line">-o-box-sizing: border-box; /*Opera9.6*/</div><div class="line">-ms-box-sizing: border-box; /*IE8*/</div><div class="line">box-sizing: border-box; /*W3C标准(IE9+，Safari5.1+,Chrome10.0+,Opera10.6+都符合box-sizing的w3c标准语法)*/</div></pre></td></tr></table></figure></p>
+<p>以及再奉献html的head头部中的一些meta说明，例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;images/img31.png&quot; media=&quot;screen&quot; /&gt; 网页头部标签的小图标</div><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; charset=&quot;utf-8&quot; /&gt; 移动端</div><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&gt; 采用IE最高版本</div><div class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge,Chrome=1&quot;&gt; 采用IE最高版本或者chrome</div><div class="line">&lt;meta name =&quot;keywords&quot; content=&quot;周三岁&quot; /&gt; 搜索关键词</div><div class="line">&lt;meta name =&quot;description&quot; content=&quot;周三岁&quot; /&gt; 网页描述</div><div class="line">&lt;meta name=&quot;author&quot; content=&quot;1505522939@qq.com&quot; /&gt; 网页作者</div></pre></td></tr></table></figure></p>
+<h3 id="对于移动端的部分优化建议"><a href="#对于移动端的部分优化建议" class="headerlink" title="对于移动端的部分优化建议"></a>对于移动端的部分优化建议</h3><p>对于一些小的图标的话，尽量不要使用图片，可以采用字体图标。像bootstrap自带的字体图标就能够满足大部分的需求了，特别是移动端的页面通常会在下面出现菜单栏，然后带有图标，这个时候如果使用图片的话，每次点击都会有卡顿的情况，所以使用图标渲染。而且图标加载速度比起图片简直就是快的多了。然后就是对于上传图片和显示上传图片的优化，最好是采用缩略图展示上传的图片，这个就是后话了，跟css没什么关系了。粗略的写到这里过吧..也没有太多建议。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/24/关于移动端纯手工撸代码/" class="archive-article-date">
+  	<time datetime="2016-12-24T02:40:04.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-24</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/22/react粗说杂讲/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React粗说杂讲</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 渣端
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
