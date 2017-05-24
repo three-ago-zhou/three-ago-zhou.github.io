@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>&#39;阿里oss文件上传修改成多按钮共用一个upload.js&#39; | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="阿里oss文件上传服务，项目中使用过，但是发现里面是使用单例模式，一个上传按钮绑定一个upload.js上传功能，百度了一波，发现都是没用的废话，然后自己修改了一下，改的很粗糙…但是能用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'阿里oss文件上传修改成多按钮共用一个upload.js'">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2017/05/23/阿里oss文件上传修改成多按钮共用一个upload-js/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="阿里oss文件上传服务，项目中使用过，但是发现里面是使用单例模式，一个上传按钮绑定一个upload.js上传功能，百度了一波，发现都是没用的废话，然后自己修改了一下，改的很粗糙…但是能用。">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk8.jpg">
+<meta property="og:updated_time" content="2017-05-23T10:19:10.499Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="'阿里oss文件上传修改成多按钮共用一个upload.js'">
+<meta name="twitter:description" content="阿里oss文件上传服务，项目中使用过，但是发现里面是使用单例模式，一个上传按钮绑定一个upload.js上传功能，百度了一波，发现都是没用的废话，然后自己修改了一下，改的很粗糙…但是能用。">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk8.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">渣端</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-阿里oss文件上传修改成多按钮共用一个upload-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#39;阿里oss文件上传修改成多按钮共用一个upload.js&#39;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk8.jpg" alt="img"><br>阿里oss文件上传服务，项目中使用过，但是发现里面是使用单例模式，一个上传按钮绑定一个upload.js上传功能，百度了一波，发现都是没用的废话，然后自己修改了一下，改的很粗糙…但是能用。<br><a id="more"></a></p>
+<h3 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div></pre></td><td class="code"><pre><div class="line">accessid = &apos;&apos;</div><div class="line">accesskey = &apos;&apos;</div><div class="line">host = &apos;&apos;</div><div class="line">policyBase64 = &apos;&apos;</div><div class="line">signature = &apos;&apos;</div><div class="line">callbackbody = &apos;&apos;</div><div class="line">filename = &apos;&apos;</div><div class="line">key = &apos;&apos;</div><div class="line">expire = 0</div><div class="line">g_object_name = &apos;&apos;</div><div class="line">g_object_name_type = &apos;&apos;</div><div class="line">now = timestamp = Date.parse(new Date()) / 1000;</div><div class="line"></div><div class="line">function send_request()</div><div class="line">&#123;</div><div class="line">    var xmlhttp = null;</div><div class="line">    if (window.XMLHttpRequest)</div><div class="line">    &#123;</div><div class="line">        xmlhttp=new XMLHttpRequest();</div><div class="line">    &#125;</div><div class="line">    else if (window.ActiveXObject)</div><div class="line">    &#123;</div><div class="line">        xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    if (xmlhttp!=null)</div><div class="line">    &#123;</div><div class="line">        serverUrl = &apos;/ossUpload/php/get.php&apos;</div><div class="line">        xmlhttp.open( &quot;GET&quot;, serverUrl, false );</div><div class="line">        xmlhttp.send( null );</div><div class="line">        return xmlhttp.responseText</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        alert(&quot;Your browser does not support XMLHTTP.&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">function check_object_radio(myradio) &#123;</div><div class="line">    var tt = document.getElementsByClassName(&apos;myradio&apos;);</div><div class="line">    for (var i = 0; i &lt; tt.length ; i++ )</div><div class="line">    &#123;</div><div class="line">        if(tt[i].checked)</div><div class="line">        &#123;</div><div class="line">            g_object_name_type = tt[i].value;</div><div class="line">            break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function get_signature()</div><div class="line">&#123;</div><div class="line">    //可以判断当前expire是否超过了当前时间,如果超过了当前时间,就重新取一下.3s 做为缓冲</div><div class="line">    now = timestamp = Date.parse(new Date()) / 1000;</div><div class="line">    if (expire &lt; now + 3)</div><div class="line">    &#123;</div><div class="line">        body = send_request()</div><div class="line">        var obj = eval (&quot;(&quot; + body + &quot;)&quot;);</div><div class="line">        host = obj[&apos;host&apos;]</div><div class="line">        policyBase64 = obj[&apos;policy&apos;]</div><div class="line">        accessid = obj[&apos;accessid&apos;]</div><div class="line">        signature = obj[&apos;signature&apos;]</div><div class="line">        expire = parseInt(obj[&apos;expire&apos;])</div><div class="line">        callbackbody = obj[&apos;callback&apos;]</div><div class="line">        key = obj[&apos;dir&apos;]</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">    return false;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">function random_string(len) &#123;</div><div class="line">    len = len || 32;</div><div class="line">    var chars = &apos;ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678&apos;;</div><div class="line">    var maxPos = chars.length;</div><div class="line">    var pwd = &apos;&apos;;</div><div class="line">    for (i = 0; i &lt; len; i++) &#123;</div><div class="line">        pwd += chars.charAt(Math.floor(Math.random() * maxPos));</div><div class="line">    &#125;</div><div class="line">    return pwd;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function get_suffix(filename) &#123;</div><div class="line">    pos = filename.lastIndexOf(&apos;.&apos;)</div><div class="line">    suffix = &apos;&apos;</div><div class="line">    if (pos != -1) &#123;</div><div class="line">        suffix = filename.substring(pos)</div><div class="line">    &#125;</div><div class="line">    return suffix;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function calculate_object_name(filename)</div><div class="line">&#123;</div><div class="line">    if (g_object_name_type == &apos;local_name&apos;)</div><div class="line">    &#123;</div><div class="line">        g_object_name += &quot;$&#123;filename&#125;&quot;</div><div class="line">    &#125;</div><div class="line">    else if (g_object_name_type == &apos;random_name&apos;)</div><div class="line">    &#123;</div><div class="line">        suffix = get_suffix(filename)</div><div class="line">        g_object_name = key + random_string(10) + suffix</div><div class="line">    &#125;</div><div class="line">    return &apos;&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function get_uploaded_object_name(filename)</div><div class="line">&#123;</div><div class="line">    if (g_object_name_type == &apos;local_name&apos;)</div><div class="line">    &#123;</div><div class="line">        tmp_name = g_object_name</div><div class="line">        tmp_name = tmp_name.replace(&quot;$&#123;filename&#125;&quot;, filename);</div><div class="line">        return tmp_name</div><div class="line">    &#125;</div><div class="line">    else if(g_object_name_type == &apos;random_name&apos;)</div><div class="line">    &#123;</div><div class="line">        return g_object_name</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function set_upload_param(up, filename, ret)</div><div class="line">&#123;</div><div class="line">    if (ret == false)</div><div class="line">    &#123;</div><div class="line">        ret = get_signature()</div><div class="line">    &#125;</div><div class="line">    g_object_name = key;</div><div class="line">    if (filename != &apos;&apos;) &#123;</div><div class="line">        suffix = get_suffix(filename)</div><div class="line">        calculate_object_name(filename)</div><div class="line">    &#125;</div><div class="line">    new_multipart_params = &#123;</div><div class="line">        &apos;key&apos; : g_object_name,</div><div class="line">        &apos;policy&apos;: policyBase64,</div><div class="line">        &apos;OSSAccessKeyId&apos;: accessid,</div><div class="line">        &apos;success_action_status&apos; : &apos;200&apos;, //让服务端返回200,不然，默认会返回204</div><div class="line">        &apos;callback&apos; : callbackbody,</div><div class="line">        &apos;signature&apos;: signature,</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    up.setOption(&#123;</div><div class="line">        &apos;url&apos;: host,</div><div class="line">        &apos;multipart_params&apos;: new_multipart_params</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    up.start();</div><div class="line">&#125;</div><div class="line"></div><div class="line">function p()&#123;&#125;;</div><div class="line">p.prototype=plupload;</div><div class="line">var len=document.getElementsByClassName(&apos;btn2&apos;).length;</div><div class="line">var xuanzs=document.getElementsByClassName(&apos;btn2&apos;);</div><div class="line">var shangc=document.getElementsByClassName(&apos;btn&apos;);</div><div class="line">var ps=[];</div><div class="line">var b=document.getElementsByName(&apos;body&apos;)[0];</div><div class="line">for(var i=0;i&lt;len;i++)&#123;</div><div class="line">    var psi=&apos;ps&apos;+i;</div><div class="line">    (function(btn1,btn2,psi)&#123;</div><div class="line">        var btnele=document.getElementById(btn2);</div><div class="line">        psi=new p.prototype.Uploader(&#123;</div><div class="line">            runtimes : &apos;html5,flash,silverlight,html4&apos;,</div><div class="line">            browse_button : btn1,</div><div class="line">            //multi_selection: false,</div><div class="line">            container: btnele.parentNode.parentNode.getElementsByTagName(&apos;em&apos;)[0],</div><div class="line">            flash_swf_url : &apos;lib/plupload-2.1.2/js/Moxie.swf&apos;,</div><div class="line">            silverlight_xap_url : &apos;lib/plupload-2.1.2/js/Moxie.xap&apos;,</div><div class="line">            url : &apos;http://oss.aliyuncs.com&apos;,</div><div class="line"></div><div class="line">            filters: &#123;</div><div class="line">                mime_types : [ //只允许上传图片和zip,rar文件</div><div class="line">                    &#123; title : &quot;Image files&quot;, extensions : &quot;jpg,gif,png,bmp,jpeg&quot; &#125;,</div><div class="line">                    &#123; title : &quot;Zip files&quot;, extensions : &quot;zip,rar&quot; &#125;</div><div class="line">                ],</div><div class="line">                max_file_size : &apos;500mb&apos;, //最大只能上传10mb的文件</div><div class="line">                prevent_duplicates : false //不允许选取重复文件</div><div class="line">            &#125;,</div><div class="line">            init: &#123;</div><div class="line">                PostInit: function() &#123;</div><div class="line">                    var btnele=document.getElementById(btn2);</div><div class="line">                    btnele.parentNode.parentNode.parentNode.getElementsByClassName(&apos;ossfile_span&apos;)[0].innerHTML = &apos;&apos;;</div><div class="line">                    document.getElementById(btn2).onclick = function() &#123;</div><div class="line">                        set_upload_param(psi, &apos;&apos;, false);</div><div class="line">                        return false;</div><div class="line">                    &#125;;</div><div class="line">                &#125;,</div><div class="line">                FilesAdded: function(up, files) &#123;</div><div class="line">                    plupload.each(files, function(file) &#123;</div><div class="line">                        var btnele=document.getElementById(btn2);</div><div class="line">                        btnele.parentNode.parentNode.parentNode.getElementsByClassName(&apos;ossfile_span&apos;)[0].innerHTML += &apos;&lt;div id=&quot;&apos; + file.id + &apos;&quot;&gt;&apos; + file.name + &apos; (&apos; + plupload.formatSize(file.size) + &apos;)&lt;b&gt;&lt;/b&gt;&apos;</div><div class="line">                            +&apos;&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;progress-bar&quot; style=&quot;width: 0%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&apos;</div><div class="line">                            +&apos;&lt;/div&gt;&apos;;</div><div class="line">                        var btnele=document.getElementById(btn2);</div><div class="line">                        btnele.parentNode.parentNode.parentNode.getElementsByClassName(&apos;ima_content&apos;)[0].innerText=file.name;</div><div class="line">                    &#125;);</div><div class="line">                &#125;,</div><div class="line">                BeforeUpload: function(up, file) &#123;</div><div class="line">                    check_object_radio();</div><div class="line">                    set_upload_param(up, file.name, true);</div><div class="line">                &#125;,</div><div class="line">                UploadProgress: function(up, file) &#123;</div><div class="line">                    var d = document.getElementById(file.id);</div><div class="line">                    d.getElementsByTagName(&apos;b&apos;)[0].innerHTML = &apos;&lt;span&gt;&apos; + file.percent + &quot;%&lt;/span&gt;&quot;;</div><div class="line">                    var prog = d.getElementsByTagName(&apos;div&apos;)[0];</div><div class="line">                    var progBar = prog.getElementsByTagName(&apos;div&apos;)[0]</div><div class="line">                    progBar.style.width= 2*file.percent+&apos;px&apos;;</div><div class="line">                    progBar.setAttribute(&apos;aria-valuenow&apos;, file.percent);</div><div class="line">                    if(file.percent&lt;100)&#123;</div><div class="line">                        document.getElementById(btn2).innerText=&apos;正在上传&apos;;</div><div class="line">                    &#125;else if(file.percent==100)&#123;</div><div class="line">                        document.getElementById(btn2).innerText=&apos;重新上传&apos;;</div><div class="line">                    &#125;</div><div class="line">                &#125;,</div><div class="line">                FileUploaded: function(up, file, info) &#123;</div><div class="line">                    if (info.status == 200)</div><div class="line">                    &#123;</div><div class="line">                        var btnele=document.getElementById(btn2);</div><div class="line">                        document.getElementById(file.id).getElementsByTagName(&apos;b&apos;)[0].innerHTML = &apos;&apos;;</div><div class="line">                        var url = host+&apos;/&apos;+get_uploaded_object_name(file.name);</div><div class="line">                        btnele.parentNode.getElementsByClassName(&apos;cert_img&apos;)[0].value=url;</div><div class="line">                        btnele.parentNode.getElementsByClassName(&apos;container_div&apos;)[0].setAttribute(&apos;class&apos;,&apos;glyphicon glyphicon-ok&apos;);</div><div class="line">                    &#125;</div><div class="line">                    else</div><div class="line">                    &#123;</div><div class="line">                        document.getElementById(file.id).getElementsByTagName(&apos;b&apos;)[0].innerHTML = info.response;</div><div class="line">                    &#125;</div><div class="line">                &#125;,</div><div class="line">                Error: function(up, err) &#123;</div><div class="line">                    if (err.code == -600) &#123;</div><div class="line">                        /*document.getElementById(&apos;console&apos;).appendChild(document.createTextNode(&quot;\n选择的文件太大了,可以根据应用情况，在upload.js 设置一下上传的最大大小&quot;));*/</div><div class="line">                    &#125;</div><div class="line">                    else if (err.code == -601) &#123;</div><div class="line">                        /*document.getElementById(&apos;console&apos;).appendChild(document.createTextNode(&quot;\n选择的文件后缀不对,可以根据应用情况，在upload.js进行设置可允许的上传文件类型&quot;));*/</div><div class="line">                    &#125;</div><div class="line">                    else if (err.code == -602) &#123;</div><div class="line">                        /*document.getElementById(&apos;console&apos;).appendChild(document.createTextNode(&quot;\n这个文件已经上传过一遍了&quot;));*/</div><div class="line">                    &#125;</div><div class="line">                    else</div><div class="line">                    &#123;</div><div class="line">                        /*document.getElementById(&apos;console&apos;).appendChild(document.createTextNode(&quot;\nError xml:&quot; + err.response));*/</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        ps.push(psi);</div><div class="line">    &#125;)(xuanzs[i].getAttribute(&apos;id&apos;),shangc[i].getAttribute(&apos;id&apos;),psi);</div><div class="line">&#125;;</div><div class="line">for(var i= 0,len=ps.length;i&lt;len;i++)&#123;</div><div class="line">    ps[i].init();</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="html的代码"><a href="#html的代码" class="headerlink" title="html的代码"></a>html的代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;</div><div class="line">    &lt;label&gt;文件上传:&lt;/label&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;em class=&quot;ossupload_em&quot;&gt;</div><div class="line">                &lt;input type=&quot;button&quot; class=&quot;btn2&quot; id=&quot;selectfiles&quot; name=&quot;&quot; value=&quot;文件上传&quot; /&gt;</div><div class="line">                &lt;a href=&quot;javascript:void(0);&quot; class=&quot;btn&quot; id=&quot;postfiles&quot; &gt;点击上传&lt;/a&gt;</div><div class="line">                &lt;input type=&quot;radio&quot; class=&quot;myradio&quot; name=&quot;myradio&quot; value=&quot;random_name&quot; checked=&quot;true&quot; /&gt;</div><div class="line">                &lt;span class=&quot;ossfile_span&quot;&gt;你的浏览器不支持flash,Silverlight或者HTML5&lt;/span&gt;</div><div class="line">                &lt;input type=&quot;hidden&quot; class=&quot;cert_img&quot; name=&quot;cert_img&quot; /&gt;</div><div class="line">                &lt;span class=&quot;container_div&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;p&gt;</div><div class="line">                    &lt;span class=&quot;ima_content&quot;&gt;请将证书上传&lt;/span&gt;</div><div class="line">                &lt;/p&gt;</div><div class="line">            &lt;/em&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure>
+<h3 id="总结下"><a href="#总结下" class="headerlink" title="总结下"></a>总结下</h3><p>js功底太薄弱，只能把单例模式变相的修改下，循环对页面的elem进行绑定，然后输出每个elem的绑定。其中html代码要有这样的格式，因为在js里面的是靠查找elem绑定相应的操作。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/23/阿里oss文件上传修改成多按钮共用一个upload-js/" class="archive-article-date">
+  	<time datetime="2017-05-23T08:39:47.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-23</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/05/23/手机端的简易日历插件/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          &#39;手机端的简易日历插件&#39;
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/24/关于移动端纯手工撸代码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于移动端纯手工撸代码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 渣端
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

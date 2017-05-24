@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>&#39;手机端的简易日历插件&#39; | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="之前移动端因为UI出的图的原因，公司要求要做个一模一样的事件日期，然后写了四五个小时才写出来的简易日历插件。不兼容ie8，因为懒得回过头去修改，所以谁有兴趣自己上我的git进去下载过来改吧(data-time)，上面只显示年-月-日，不显示时-分-秒，因为考虑移动端的原因，屏幕小的情况。里面对闰年，平年都进行过判断显示。用了半年了，没有出错过。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'手机端的简易日历插件'">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2017/05/23/手机端的简易日历插件/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="之前移动端因为UI出的图的原因，公司要求要做个一模一样的事件日期，然后写了四五个小时才写出来的简易日历插件。不兼容ie8，因为懒得回过头去修改，所以谁有兴趣自己上我的git进去下载过来改吧(data-time)，上面只显示年-月-日，不显示时-分-秒，因为考虑移动端的原因，屏幕小的情况。里面对闰年，平年都进行过判断显示。用了半年了，没有出错过。">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk9.jpg">
+<meta property="og:updated_time" content="2017-05-23T10:07:05.107Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="'手机端的简易日历插件'">
+<meta name="twitter:description" content="之前移动端因为UI出的图的原因，公司要求要做个一模一样的事件日期，然后写了四五个小时才写出来的简易日历插件。不兼容ie8，因为懒得回过头去修改，所以谁有兴趣自己上我的git进去下载过来改吧(data-time)，上面只显示年-月-日，不显示时-分-秒，因为考虑移动端的原因，屏幕小的情况。里面对闰年，平年都进行过判断显示。用了半年了，没有出错过。">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk9.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">渣端</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-手机端的简易日历插件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#39;手机端的简易日历插件&#39;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk9.jpg" alt="img"><br>之前移动端因为UI出的图的原因，公司要求要做个一模一样的事件日期，然后写了四五个小时才写出来的简易日历插件。不兼容ie8，因为懒得回过头去修改，所以谁有兴趣自己上我的git进去下载过来改吧(data-time)，上面只显示年-月-日，不显示时-分-秒，因为考虑移动端的原因，屏幕小的情况。里面对闰年，平年都进行过判断显示。用了半年了，没有出错过。<br><a id="more"></a></p>
+<h3 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div></pre></td><td class="code"><pre><div class="line">window.onload=function()&#123;</div><div class="line">    var year=0;</div><div class="line">    var two=0;//闰年还是平年中的二月日期</div><div class="line">    var countyear=0;//右点击之后，获得的年</div><div class="line">    var clickmons=0;//点击获得的月份</div><div class="line">    var timestamps=Date.parse(new Date())/1000;//时间戳，到秒</div><div class="line">    var minutes=timestamps/60;//有多少分</div><div class="line">    var hours=timestamps/(60*60);//有多少小时</div><div class="line">    var days=timestamps/(60*60*24);//有多少天</div><div class="line">    var years=timestamps/((60*60*24)*(31+two+31+30+31+30+31+31+30+31+30+31));</div><div class="line">    var myDate = new Date();//当前的时间戳</div><div class="line">    var newyear=myDate.getFullYear();//当前的月份</div><div class="line">    function createTag(tag,attr)&#123;</div><div class="line">        if(tag==undefined &amp;&amp; attr==undefined)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        var tag_name=document.createElement(tag.toUpperCase());</div><div class="line">        if(attr==null)&#123;</div><div class="line">            return tag_name;</div><div class="line">        &#125;else&#123;</div><div class="line">            for(var i=0,len=attr.length;i&lt;len;i++)&#123;</div><div class="line">                for(var key in attr[i])&#123;</div><div class="line">                    tag_name.setAttribute(key,attr[i][key]);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            return tag_name;</div><div class="line">        &#125;</div><div class="line">    &#125;  </div><div class="line">    var spans=document.createTextNode(newyear);</div><div class="line">    var a1s=document.createTextNode(&apos;&lt;&apos;);</div><div class="line">    var a2s=document.createTextNode(&apos;&gt;&apos;);</div><div class="line">    var inp=createTag(&apos;input&apos;,[&#123;&apos;type&apos;:&apos;hidden&apos;&#125;,&#123;&apos;name&apos;:&apos;&apos;&#125;,&#123;&apos;id&apos;:&apos;timestamp&apos;&#125;]);</div><div class="line">    var inp2=createTag(&apos;input&apos;,[&#123;&apos;type&apos;:&apos;hidden&apos;&#125;,&#123;&apos;name&apos;:&apos;&apos;&#125;,&#123;&apos;id&apos;:&apos;timestamp2&apos;&#125;]);</div><div class="line">    var inp3=createTag(&apos;input&apos;,[&#123;&apos;type&apos;:&apos;hidden&apos;&#125;,&#123;&apos;name&apos;:&apos;&apos;&#125;,&#123;&apos;id&apos;:&apos;timestamp3&apos;&#125;]);</div><div class="line">    var div=createTag(&apos;div&apos;,[&#123;&apos;class&apos;:&apos;data_year&apos;&#125;]);</div><div class="line">    var span=createTag(&apos;span&apos;,[&#123;&apos;class&apos;:&apos;data_span&apos;&#125;]); </div><div class="line">    var a1=createTag(&apos;a&apos;,[&#123;&apos;class&apos;:&apos;data_year_a1&apos;&#125;,&#123;&apos;href&apos;:&apos;javascript:void(0)&apos;&#125;]);</div><div class="line">    var a2=createTag(&apos;a&apos;,[&#123;&apos;class&apos;:&apos;data_year_a2&apos;&#125;,&#123;&apos;href&apos;:&apos;javascript:void(0)&apos;&#125;]);</div><div class="line">    var ms=createTag(&apos;div&apos;,[&#123;&apos;class&apos;:&apos;data_month&apos;&#125;]);</div><div class="line">    // 未点击时自动渲染一遍</div><div class="line">    function initial()&#123;</div><div class="line">        isLeapYear(year);</div><div class="line">        hide();</div><div class="line">    &#125;;</div><div class="line">    initial();</div><div class="line">    // 这是初始点击时自动获得的时间戳;</div><div class="line">    document.getElementById(&apos;newdata&apos;).onclick=function()&#123;</div><div class="line">        year=new Date().getFullYear();</div><div class="line">        // 当我点击的时候要清空页面数据</div><div class="line">        countyear=parseInt(document.getElementsByClassName(&apos;data_span&apos;)[0].innerText);</div><div class="line">        nulls();</div><div class="line">        isLeapYear(year);</div><div class="line">    &#125;;</div><div class="line">    document.getElementsByClassName(&apos;submit_data&apos;)[0].onclick=function()&#123;</div><div class="line">        year=new Date().getFullYear();</div><div class="line">        // 当我点击的时候要清空页面数据</div><div class="line">        countyear=parseInt(document.getElementsByClassName(&apos;data_span&apos;)[0].innerText);</div><div class="line">        nulls();</div><div class="line">        isLeapYear(year);</div><div class="line">    &#125;;</div><div class="line">    // 判断是否闰年</div><div class="line">    function isLeapYear(year) &#123;</div><div class="line">        var cond1 = year % 4 == 0;</div><div class="line">        var cond2 = year % 100 != 0; </div><div class="line">        var cond3 = year % 400 ==0;</div><div class="line">        var cond = cond1 &amp;&amp; cond2 || cond3;</div><div class="line">        if(cond) &#123;</div><div class="line">            two=29;</div><div class="line">            return y(29);</div><div class="line">        &#125; else &#123;</div><div class="line">            two=28;</div><div class="line">            return y(28);</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    // 年份的渲染和布局的渲染</div><div class="line">    function y(two)&#123;</div><div class="line">        document.getElementById(&apos;data_content&apos;).appendChild(div);</div><div class="line">        document.getElementsByClassName(&apos;data_year&apos;)[0].appendChild(span);</div><div class="line">        document.getElementsByClassName(&apos;data_span&apos;)[0].appendChild(spans);</div><div class="line">        document.getElementsByClassName(&apos;data_year&apos;)[0].appendChild(a1);</div><div class="line">        document.getElementsByClassName(&apos;data_year_a1&apos;)[0].appendChild(a1s);</div><div class="line">        document.getElementsByClassName(&apos;data_year&apos;)[0].appendChild(a2);</div><div class="line">        document.getElementsByClassName(&apos;data_year_a2&apos;)[0].appendChild(a2s);</div><div class="line">        document.getElementsByClassName(&apos;data_year&apos;)[0].appendChild(ms);</div><div class="line">        // 月份里面的添加</div><div class="line">        ass();</div><div class="line">        // </div><div class="line">        // </div><div class="line">        // return console.log(&apos;返回出了渲染好的页面，进入ass()进行月份的循环&apos;);</div><div class="line">    &#125;;</div><div class="line">    // 月份的渲染 传入当前的月份i</div><div class="line">    function ass()&#123;</div><div class="line">        var i=1;</div><div class="line">        var getm=13;</div><div class="line">        /*console.log(&apos;获取到了countyear:&apos;+countyear);*/</div><div class="line">        // 进行判断，如果点击的时间比现在时间戳小的话，就是十二月份;</div><div class="line">        // console.log(&apos;这是指定日期的时间戳&apos;+Date.parse(new Date(countyear+&apos;,12,31&apos;))/1000);</div><div class="line">        if(timestamps-(Date.parse(new Date(countyear+&apos;/12/31&apos;))/1000)&gt;0)&#123;</div><div class="line">            // console.log(&apos;当前年份比这个年份大&apos;);</div><div class="line">        &#125;else&#123;</div><div class="line">            getm=myDate.getMonth()+2;</div><div class="line">        &#125;</div><div class="line">        // console.log(getm);</div><div class="line">        //这里的i必须是变量月份，获取到当前的时间戳的年份里面的月份</div><div class="line">        while(i&lt;getm)&#123;</div><div class="line">            var a=document.createElement(&apos;A&apos;);</div><div class="line">            document.getElementsByClassName(&apos;data_month&apos;)[0].appendChild(a);</div><div class="line">            a.setAttribute(&apos;class&apos;,&apos;mont&apos;+i);</div><div class="line">            // a.setAttribute(&apos;id&apos;,&apos;mont&apos;);</div><div class="line">            a.setAttribute(&apos;href&apos;,&apos;javascript:void(0)&apos;);</div><div class="line">            if(document.getElementById(&apos;timestamp3&apos;)!=null &amp;&amp; document.getElementById(&apos;timestamp3&apos;).value==i)&#123;</div><div class="line">                document.getElementsByClassName(&apos;mont&apos;+i)[0].setAttribute(&apos;id&apos;,&apos;mont&apos;);</div><div class="line">                document.getElementsByClassName(&apos;mont&apos;+i)[0].style.border=&apos;1px solid #00baf8&apos;;</div><div class="line">                document.getElementsByClassName(&apos;mont&apos;+i)[0].style.color=&apos;#00baf8&apos;; </div><div class="line">            &#125;</div><div class="line">            var as=document.createTextNode(i+&apos;月&apos;);</div><div class="line">            document.getElementsByClassName(&apos;mont&apos;+i)[0].appendChild(as);</div><div class="line">            </div><div class="line">            i++;</div><div class="line">        &#125;;</div><div class="line">        if(i==getm)&#123;</div><div class="line">            return show();</div><div class="line">            // console.log(&apos;月份已经到了,返回出显示&apos;);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    //这里是左点击事件获得的年份的时间戳</div><div class="line">    function prevyear()&#123;</div><div class="line">        var clickyear=document.getElementsByClassName(&apos;data_span&apos;)[0].innerText;</div><div class="line">        clickyear=parseInt(clickyear)-1;</div><div class="line">        document.getElementsByClassName(&apos;data_span&apos;)[0].innerText=clickyear;</div><div class="line">        // console.log(&apos;左点击事件响应了&apos;+clickyear);</div><div class="line">        if(document.getElementsByClassName(&apos;data_month&apos;)[0].innerHTML!=&apos;&apos;)&#123;</div><div class="line">            nulls();</div><div class="line">            countyear=clickyear;</div><div class="line">            isLeapYear(clickyear);</div><div class="line">            changeyear(clickyear);</div><div class="line">            return ;</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    //这里是右点击事件获得的年份的时间戳</div><div class="line">    function nextyear()&#123;</div><div class="line">        if(!(timestamps-(Date.parse(new Date(countyear+&apos;/12/31&apos;))/1000)&gt;0))&#123;</div><div class="line">            return ;</div><div class="line">        &#125;</div><div class="line">        var clickyear=document.getElementsByClassName(&apos;data_span&apos;)[0].innerText;</div><div class="line">        clickyear=parseInt(clickyear)+1;</div><div class="line">        </div><div class="line">        document.getElementsByClassName(&apos;data_span&apos;)[0].innerText=clickyear;</div><div class="line">        // console.log(&apos;右点击事件响应了&apos;+clickyear);</div><div class="line">        if(document.getElementsByClassName(&apos;data_month&apos;)[0].innerHTML!=&apos;&apos;)&#123;</div><div class="line">            nulls();</div><div class="line">            countyear=clickyear;</div><div class="line">            isLeapYear(clickyear);</div><div class="line">            changeyear(clickyear);</div><div class="line">            return ;</div><div class="line">        &#125;;</div><div class="line">    &#125;;</div><div class="line">    // 左点击事件</div><div class="line">    document.getElementsByClassName(&apos;data_year_a1&apos;)[0].onclick=function()&#123;</div><div class="line">        // console.log(&apos;我点击了左边的事件&apos;);</div><div class="line">        prevyear();</div><div class="line">    &#125;;</div><div class="line">    // 右点击事件</div><div class="line">    document.getElementsByClassName(&apos;data_year_a2&apos;)[0].onclick=function()&#123;</div><div class="line">        // console.log(&apos;我点击了右边的事件&apos;);</div><div class="line">        nextyear();</div><div class="line">    &#125;;</div><div class="line">    // 先是日期框，dom元素加载完之后才能显示，不然就会空白，原生太讲究树形的顺序了</div><div class="line">    function show()&#123;</div><div class="line">        document.getElementById(&apos;data_content&apos;).style.display=&apos;block&apos;;</div><div class="line">    &#125;;</div><div class="line">    // 初始化时，页面数据加载，但是隐藏</div><div class="line">    function hide()&#123;</div><div class="line">        document.getElementById(&apos;data_content&apos;).style.display=&apos;none&apos;;</div><div class="line">    &#125;;</div><div class="line">    // 点击月份的时候获得时间戳</div><div class="line">    document.getElementsByClassName(&quot;data_month&quot;)[0].addEventListener(&apos;click&apos;,function(e)&#123;</div><div class="line">        clickmons=parseInt(e.target.innerText);</div><div class="line">        newdatas();</div><div class="line">    &#125;);</div><div class="line">    function newdatas()&#123;</div><div class="line">        document.getElementsByClassName(&apos;statement_datas&apos;)[0].appendChild(inp);</div><div class="line">        document.getElementsByClassName(&apos;statement_datas&apos;)[0].appendChild(inp2);</div><div class="line">        document.getElementsByClassName(&apos;statement_datas&apos;)[0].appendChild(inp3);</div><div class="line">        hide();</div><div class="line">        var s=0;</div><div class="line">        if(clickmons==2)&#123;</div><div class="line">            if(two==28)&#123;</div><div class="line">                inp.setAttribute(&apos;value&apos;,(Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/28&apos;))+86399000)/1000);</div><div class="line">                inp2.setAttribute(&apos;value&apos;,Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/1&apos;))/1000);</div><div class="line">                s=Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/28&apos;));</div><div class="line">                </div><div class="line">            &#125;else if(two==29)&#123;</div><div class="line">                inp.setAttribute(&apos;value&apos;,(Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/29&apos;))+86399000)/1000);</div><div class="line">                inp2.setAttribute(&apos;value&apos;,Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/1&apos;))/1000);</div><div class="line">                s=Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/29&apos;));</div><div class="line">            &#125;;</div><div class="line">        &#125;else if(clickmons==1||clickmons==3||clickmons==5||clickmons==7||clickmons==8||clickmons==10||clickmons==12)&#123;</div><div class="line">            inp.setAttribute(&apos;value&apos;,(Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/31&apos;))+86399000)/1000);</div><div class="line">            inp2.setAttribute(&apos;value&apos;,Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/1&apos;))/1000);</div><div class="line">            s=Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/31&apos;));</div><div class="line">        &#125;else if(clickmons==4||clickmons==6||clickmons==9||clickmons==11)&#123;</div><div class="line">            inp.setAttribute(&apos;value&apos;,(Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/30&apos;))+86399000)/1000);</div><div class="line">            inp2.setAttribute(&apos;value&apos;,Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/1&apos;))/1000);</div><div class="line">            s=Date.parse(new Date(countyear+&apos;/&apos;+clickmons+&apos;/30&apos;));</div><div class="line">        &#125;;</div><div class="line">        var getf=new Date(s).getFullYear();</div><div class="line">        var getm=new Date(s).getMonth()+1;</div><div class="line">        inp3.setAttribute(&apos;value&apos;,new Date(s).getMonth()+1);</div><div class="line">        document.getElementById(&apos;newdata&apos;).innerText=getf+&apos;年&apos;+getm+&apos;月&apos;;</div><div class="line">        document.getElementById(&apos;state_area&apos;).innerText=getf+&apos;年&apos;+getm+&apos;月结算明细&apos;;</div><div class="line">    &#125;;</div><div class="line">    // 左右点击的时候判断是否在同一个年里</div><div class="line">    function changeyear(d)&#123;</div><div class="line">        if(d!=parseInt(document.getElementById(&apos;newdata&apos;).innerText.substring(0,4)))&#123;</div><div class="line">            document.getElementById(&apos;mont&apos;).style.border=&quot;none&quot;;</div><div class="line">            document.getElementById(&apos;mont&apos;).style.color=&quot;#333&quot;;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    //点击的时候清空页面里面的月份</div><div class="line">    function nulls()&#123;</div><div class="line">        document.getElementsByClassName(&apos;data_month&apos;)[0].innerHTML=&apos;&apos;;</div><div class="line">        // console.log(&apos;页面清空&apos;);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>原生js要求很严格的声明位置，必须要让调用在声明之后。并且，感觉用queryselect可能会比较好一点，下次的混着用试试会不会出错吧</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/23/手机端的简易日历插件/" class="archive-article-date">
+  	<time datetime="2017-05-23T08:51:33.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-23</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/23/阿里oss文件上传修改成多按钮共用一个upload-js/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;阿里oss文件上传修改成多按钮共用一个upload.js&#39;</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 渣端
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
