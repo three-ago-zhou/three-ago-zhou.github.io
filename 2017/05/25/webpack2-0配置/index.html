@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>&#39;Webpack2.0配置&#39; | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="webpack2.0配置，基础配置，包括了公共依赖模块不打包，公用Js打包成一个js，css单独打包出来，sass打包编译，es6打包编译，css编译添加浏览器兼容产生后缀名，已经html模版的自动编译，东西比较简单比较初级，webpack还只是懂得一点点皮毛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'Webpack2.0配置'">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2017/05/25/webpack2-0配置/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="webpack2.0配置，基础配置，包括了公共依赖模块不打包，公用Js打包成一个js，css单独打包出来，sass打包编译，es6打包编译，css编译添加浏览器兼容产生后缀名，已经html模版的自动编译，东西比较简单比较初级，webpack还只是懂得一点点皮毛">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk10.jpg">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/webpackimg.jpg">
+<meta property="og:updated_time" content="2017-05-25T07:34:06.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="'Webpack2.0配置'">
+<meta name="twitter:description" content="webpack2.0配置，基础配置，包括了公共依赖模块不打包，公用Js打包成一个js，css单独打包出来，sass打包编译，es6打包编译，css编译添加浏览器兼容产生后缀名，已经html模版的自动编译，东西比较简单比较初级，webpack还只是懂得一点点皮毛">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk10.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">渣端</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-webpack2-0配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#39;Webpack2.0配置&#39;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk10.jpg" alt="img"><br>webpack2.0配置，基础配置，包括了公共依赖模块不打包，公用Js打包成一个js，css单独打包出来，sass打包编译，es6打包编译，css编译添加浏览器兼容产生后缀名，已经html模版的自动编译，东西比较简单比较初级，webpack还只是懂得一点点皮毛<br><a id="more"></a></p>
+<h3 id="package-json代码"><a href="#package-json代码" class="headerlink" title="package.json代码"></a>package.json代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;webpacks&quot;,</div><div class="line">  &quot;version&quot;: &quot;2.0.0&quot;,</div><div class="line">  &quot;description&quot;: &quot;&quot;,</div><div class="line">  &quot;main&quot;: &quot;index.js&quot;,</div><div class="line">  &quot;dependencies&quot;: &#123;</div><div class="line">    &quot;autoprefixer&quot;: &quot;^6.7.2&quot;,</div><div class="line">    &quot;babel-core&quot;: &quot;^6.22.1&quot;,</div><div class="line">    &quot;babel-loader&quot;: &quot;^6.2.10&quot;,</div><div class="line">    &quot;babel-preset-es2015&quot;: &quot;^6.22.0&quot;,</div><div class="line">    &quot;babel-preset-react&quot;: &quot;^6.22.0&quot;,</div><div class="line">    &quot;css-loader&quot;: &quot;^0.26.1&quot;,</div><div class="line">    &quot;node-sass&quot;: &quot;^4.5.3&quot;,</div><div class="line">    &quot;postcss-loader&quot;: &quot;^1.2.2&quot;,</div><div class="line">    &quot;react&quot;: &quot;^15.4.2&quot;,</div><div class="line">    &quot;react-dom&quot;: &quot;^15.4.2&quot;,</div><div class="line">    &quot;react-redux&quot;: &quot;^5.0.2&quot;,</div><div class="line">    &quot;style-loader&quot;: &quot;^0.13.1&quot;,</div><div class="line">    &quot;webpack&quot;: &quot;^2.2.1&quot;,</div><div class="line">    &quot;webpack-dev-server&quot;: &quot;^2.3.0&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;devDependencies&quot;: &#123;</div><div class="line">    &quot;autoprefixer&quot;: &quot;^6.7.2&quot;,</div><div class="line">    &quot;babel-core&quot;: &quot;^6.22.1&quot;,</div><div class="line">    &quot;babel-loader&quot;: &quot;^6.2.10&quot;,</div><div class="line">    &quot;babel-plugin-react-transform&quot;: &quot;^2.0.2&quot;,</div><div class="line">    &quot;babel-preset-es2015&quot;: &quot;^6.22.0&quot;,</div><div class="line">    &quot;babel-preset-react&quot;: &quot;^6.22.0&quot;,</div><div class="line">    &quot;css-loader&quot;: &quot;^0.26.1&quot;,</div><div class="line">    &quot;extract-text-webpack-plugin&quot;: &quot;^2.0.0-rc.3&quot;,</div><div class="line">    &quot;html-webpack-plugin&quot;: &quot;^2.28.0&quot;,</div><div class="line">    &quot;postcss-loader&quot;: &quot;^1.2.2&quot;,</div><div class="line">    &quot;react&quot;: &quot;^15.4.2&quot;,</div><div class="line">    &quot;react-dom&quot;: &quot;^15.4.2&quot;,</div><div class="line">    &quot;react-hot-loader&quot;: &quot;^1.3.1&quot;,</div><div class="line">    &quot;react-transform-hmr&quot;: &quot;^1.0.4&quot;,</div><div class="line">    &quot;redux-devtools&quot;: &quot;^3.3.2&quot;,</div><div class="line">    &quot;sass-loader&quot;: &quot;^5.0.0&quot;,</div><div class="line">    &quot;style-loader&quot;: &quot;^0.13.1&quot;,</div><div class="line">    &quot;webpack&quot;: &quot;^2.2.1&quot;,</div><div class="line">    &quot;webpack-dev-server&quot;: &quot;^2.3.0&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;scripts&quot;: &#123;</div><div class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</div><div class="line">    &quot;start&quot;: &quot;webpack-dev-server --hot --inline&quot;,</div><div class="line">    &quot;dist&quot;: &quot;webpack --config webpack.config.js --progress --colors -p&quot;,</div><div class="line">    &quot;dll&quot;: &quot;webpack --config webpack.config.dll.js --progress --colors -p&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;author&quot;: &quot;&quot;,</div><div class="line">  &quot;license&quot;: &quot;ISC&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="webpack-config-dll-js"><a href="#webpack-config-dll-js" class="headerlink" title="webpack.config.dll.js"></a>webpack.config.dll.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">const webpack = require(&apos;webpack&apos;);</div><div class="line"></div><div class="line">// 公共依赖包不打包配置</div><div class="line">const vendors = [</div><div class="line">    &apos;react&apos;,</div><div class="line">    &apos;react-dom&apos;,</div><div class="line">    &apos;react-redux&apos;,</div><div class="line">    &apos;redux&apos;</div><div class="line">];</div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">  // 将公共模块依赖js打包到build/lib.js</div><div class="line">    output: &#123;</div><div class="line">        path: &apos;build&apos;,</div><div class="line">        filename: &apos;[name].js&apos;,</div><div class="line">        library: &apos;[name]&apos;,</div><div class="line">    &#125;,</div><div class="line">    entry: &#123;</div><div class="line">        &quot;lib&quot;: vendors,</div><div class="line">    &#125;,</div><div class="line">    // 将公共依赖资源包打包放入dll/manifest.json中，再放入webpack.config.js实现不打包公共依赖的功能</div><div class="line">    plugins: [</div><div class="line">        new webpack.DllPlugin(&#123;</div><div class="line">            path: &apos;dll/manifest.json&apos;,</div><div class="line">            name: &apos;[name]&apos;,</div><div class="line">            context: __dirname,</div><div class="line">        &#125;),</div><div class="line">    ],</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">// 引入webpack模块依赖</div><div class="line">let webpack = require(&apos;webpack&apos;);</div><div class="line">// 引入css样式兼容后缀依赖</div><div class="line">let autoprefixer = require(&apos;autoprefixer&apos;);</div><div class="line">// 引入编译打包配置依赖</div><div class="line">let ExtractTextPlugin = require(&quot;extract-text-webpack-plugin&quot;);</div><div class="line">// 引入html模版自动生成模块依赖</div><div class="line">let HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);</div><div class="line">// 引入路径依赖</div><div class="line">let path=require(&apos;path&apos;);</div><div class="line"></div><div class="line"></div><div class="line">// 进行打包配置</div><div class="line">module.exports = &#123;</div><div class="line">	// 打包入口</div><div class="line">	entry:  &#123;</div><div class="line">		// index:__dirname + &quot;/app/index.js&quot;</div><div class="line">		// ,</div><div class="line">		index: __dirname + &quot;/app/index/main.js&quot;,</div><div class="line">		home: __dirname + &quot;/app/home/main.js&quot;</div><div class="line">	&#125;,</div><div class="line">	// 打包文件输出路口</div><div class="line">	output: &#123;</div><div class="line">	   path: __dirname + &quot;/public&quot;,</div><div class="line">	   filename: &quot;[name].bundle.js&quot;</div><div class="line">	&#125;,</div><div class="line"></div><div class="line">// 配置文件的打包编译</div><div class="line">	module: &#123;//在配置文件里添加JSON loader</div><div class="line">	 	rules: [</div><div class="line">			&#123;</div><div class="line">		        test: /\.json$/,</div><div class="line">		        loader: &quot;json-loader&quot;</div><div class="line">		    &#125;,&#123;</div><div class="line">		    	test:/\.js$/,</div><div class="line">		    	exclude:/node_modules/,</div><div class="line">		    	loader:&apos;babel-loader&apos;</div><div class="line">		    &#125;,&#123;</div><div class="line">		    	test:/\.scss$/,</div><div class="line">		    	loader: ExtractTextPlugin.extract(&#123;</div><div class="line">		    		fallback:&quot;style-loader&quot;,</div><div class="line">		    		use:[&quot;css-loader&quot; , &quot;sass-loader&quot;],</div><div class="line">		    		publicPath:&quot;/public&quot;</div><div class="line">		    	&#125;)</div><div class="line">		    &#125;,&#123;</div><div class="line">		    	test:/\.css$/,</div><div class="line">		    	exclude:/node_modules/,</div><div class="line">		    	loader:ExtractTextPlugin.extract(&#123;</div><div class="line">		    		fallback:&quot;style-loader&quot;,</div><div class="line">		    		use:&quot;css-loader?modules&quot;,</div><div class="line">		    		publicPath:&quot;/public&quot;</div><div class="line">		    	&#125;)</div><div class="line">		    	//&apos;style-loader!css-loader?modules&apos;</div><div class="line">		    &#125;,&#123;</div><div class="line">			    test: /\.css/,</div><div class="line">		        loader: &apos;postcss-loader&apos;,</div><div class="line">		        options: &#123;</div><div class="line">		          plugins: function () &#123;</div><div class="line">		            return [</div><div class="line">		              require(&apos;precss&apos;),</div><div class="line">		              require(&apos;autoprefixer&apos;)</div><div class="line">		            ];</div><div class="line">		          &#125;</div><div class="line">		        &#125;</div><div class="line">					&#125;</div><div class="line">	    ]</div><div class="line">	&#125;,</div><div class="line">	// 打包的插件引用</div><div class="line">	plugins: [</div><div class="line">		// html模版的插件的配置</div><div class="line">    new HtmlWebpackPlugin(&#123;</div><div class="line">  		title: &quot;index&quot;,</div><div class="line">  		template: __dirname + &quot;/app/index/index.tmpl.html&quot;,</div><div class="line">  		inject:&apos;head&apos;,</div><div class="line">  		filename:&apos;index.html&apos;,</div><div class="line">  		hash: false,</div><div class="line">  		inject: &apos;body&apos;,</div><div class="line">  		chunks:[&apos;index&apos;]</div><div class="line">  		//minify:true</div><div class="line">    &#125;),</div><div class="line">		new HtmlWebpackPlugin(&#123;</div><div class="line">  		title: &quot;home&quot;,</div><div class="line">  		template: __dirname + &quot;/app/home/index.tmpl.html&quot;,</div><div class="line">  		inject:&apos;head&apos;,</div><div class="line">  		filename:&apos;home.html&apos;,</div><div class="line">  		hash: false,</div><div class="line">  		inject: &apos;body&apos;,</div><div class="line">  		chunks:[&apos;home&apos;]</div><div class="line">  		//minify:true</div><div class="line">    &#125;),</div><div class="line">		// 单独打包css的插件配置</div><div class="line">		new ExtractTextPlugin(&#123;</div><div class="line">    	filename:&apos;/[name].css&apos;,</div><div class="line">    	disable:false,</div><div class="line">    	allChunks:true</div><div class="line">    &#125;),</div><div class="line">		// 文件热更新不需要刷新页面的配置</div><div class="line">		new webpack.HotModuleReplacementPlugin(),</div><div class="line">		// 全局配置变量</div><div class="line">    new webpack.DefinePlugin(&#123;</div><div class="line">	    &apos;process.env.NODE_ENV&apos;: &apos;&quot;development&quot;&apos;</div><div class="line">		&#125;),</div><div class="line">		// 对公共依赖模块不打包的依赖引入</div><div class="line">		new webpack.DllReferencePlugin(&#123;</div><div class="line">        context: __dirname,</div><div class="line">        manifest: require(&apos;./dll/manifest.json&apos;),</div><div class="line">    &#125;),</div><div class="line">		// 对公共js的打包配置</div><div class="line">		new webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">			name: &apos;commons&apos;,</div><div class="line">			filename: &apos;[name].bundle.js&apos;,</div><div class="line">			minChunks: 3 //设置3个以上页面引入就打包成commons.js</div><div class="line">		&#125;)</div><div class="line">	],</div><div class="line">	/*devServer: &#123;</div><div class="line">	    historyApiFallback:true,//当服务器不存在文件，都被重定向根目录/</div><div class="line">	    inline:true, //当文件发生变化时，更新页面</div><div class="line">	    port:9090, //端口可以自定义</div><div class="line">			colors:blue, //设置终端的输出颜色</div><div class="line">			contentBase: path.join(__dirname, &quot;public&quot;) //设置访问的目录</div><div class="line">	 &#125;*/</div><div class="line">	//  本地服务的配置端口</div><div class="line">	devServer: &#123;</div><div class="line">	  contentBase: path.join(__dirname, &quot;public&quot;),</div><div class="line">	  compress: true,</div><div class="line">	  port: 9000</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>编译的时候先编译dll，npm run dll  。然后再编译想打包的文件，npm run dist 最后启动服务npm start 进行本地服务的运行。webpack.config.js 里面的入口文件的地址路径根据自己的实际用力进行创建。给大家看下我的文件基础创建：<br><img src="/images/webpackimg.jpg" alt="img"></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/25/webpack2-0配置/" class="archive-article-date">
+  	<time datetime="2017-05-25T07:21:37.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-25</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/23/手机端的简易日历插件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;手机端的简易日历插件&#39;</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 渣端
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
