@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://three-ago-zhou.github.io">
+  <title>&#39;react+antd-mobile+react-router踩过的坑&#39; | 周三岁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'react+antd-mobile+react-router踩过的坑'">
+<meta property="og:url" content="https://three-ago-zhou.github.io/2017/06/27/react-antd-mobile-react-router踩过的坑/index.html">
+<meta property="og:site_name" content="周三岁">
+<meta property="og:description" content="独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk6.jpg">
+<meta property="og:updated_time" content="2017-06-27T07:38:35.461Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="'react+antd-mobile+react-router踩过的坑'">
+<meta name="twitter:description" content="独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk6.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/css/images/head1.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">渣端</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一个来自渣端的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">起始地</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">大神链接</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">渣端</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/css/images/head1.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">渣端</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一个来自渣端的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">起始地</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/three-ago-zhou" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-react-antd-mobile-react-router踩过的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#39;react+antd-mobile+react-router踩过的坑&#39;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/bgk6.jpg" alt="img"><br>独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验<br><a id="more"></a></p>
+<h3 id="关于整个项目的总结"><a href="#关于整个项目的总结" class="headerlink" title="关于整个项目的总结"></a>关于整个项目的总结</h3><p>使用了react和webpack以及antd-mobile之后。最先明了的就是前后端分离了，后台只需要提供数据接口就行，并不需要去思考数据的展示逻辑和各种搜索的逻辑，让后台也是能够轻松下来，更好的去面对那些庞大严谨的数据逻辑。所有的get和post数据都通过ajax。</p>
+<p>1.开发前，前端和后台必须定义好返回数据的接口以及各种说明文档，这样能够加快速度。我因为略懂一点php语法，所以后台跟我进行了简单的数据接口的说明，并能够立即的开发，发现一些可以优化的数据接口，也是能够自己去修改接口。所以前端必须要懂后台的语言，纯前端的路走不远，终究会被淘汰。</p>
+<p>2.必要时对一些数据写死，减少ajax的请求数量，每个网页都是有他的死数据，这类的数据完全可以写死在一个js里面，然后通过react的props进行数据的传递。</p>
+<p>3.摆脱了以往后台对前端模版的包含和编译，减少了一个步骤。例如一个tab的数据切换，最常见的就是a链接，然后点击之后返回相应的一个动态模版。例如php，模版渲染之后便是形成一个动态模版，但是这个动态模版其实里面的数据内容会编成php的格式，也就是一个php包含住了整个html的页面进行返回，每一次的返回模版可想而知有多复杂，不过可以加入缓存来储存住这些模版，不过数据和页面状态有时候就不是最新的，需要清除缓存。react对于这一点个人感觉还是有优秀的一面，就是通过this.state来定义储存每个tab切换后的数据，所以只需要第一次的切换进行ajax数据请求，之后的就像是静态模版一下，切换储存在本地的数据，不会有渲染的模版，不会有老数据的沉淀，每一次的切换都是顺畅。</p>
+<p>4.数据状态的切换：例如详情页面，不同的id里面的内容总是不一样，传统的方法是根据id来进行数据的请求，然后包含住一个静态Html模版进行一个php动态模版的返回，就会有每次打开页面的时候，就是一种请求，请求好了渲染页面，中间会有零点几秒的等待，如果产品多的情况下，以及人多的情况下久而久之，一个缓存文件夹中的缓存页面就会多到一种程度。react采用的是ajax的方式和state的方式，所以每次改变id的时候，数据通过接口获取之后，立马改变本地的state,无刷新状态的页面数据更新，这对于一种体验来说非常的好，好到点了其他产品的一瞬间，页面的数据就已经更换了，（如果网速好，ajax没有卡的话，一般来说一个ajax肯定不会卡，因为走的是异步线程）。所以页面也不会有缓存，不会有请求后的刷新页面，这还是很有吸引力的。</p>
+<p>5.组件化的开发：一个前端，拿到一个静态页面，在脑海中就已经将所有的页面块进行了构思，一个页面在前端脑海中应该是一个一个模块的。react就很好的实现组件开发，将一个页面，一个大功能分成了许多组件，每个组件拥有的作用都是不一样，例如（容器组件，展示组件，以及推崇的无状态组件）。组件化的开发，可以降低代码的冗余，更改一个功能和样式并不会影响其他的组件，并且公用组件可以复用，这点就像是后台的一些公共模版头部底部这样的类型。</p>
+<p>6.使用了webpack之后，好的webpack配置出来之后，打包出来的压缩包必然很少，并且可以畅用一些新的技术和新的语法，只要引入相应的编译包。一些好的语法总是能够提高开发效率，例如es6和scss的语法糖，之前可能要写四五行的代码，在语法糖下可能是一个函数，一行代码，无疑提高了许多的效率。并且编译后的代码，如果压缩之后，相信不会有无聊的人还想要攻击网站，与其费劲还原还不如看其他的网站去。并且页面渲染出来之后，右键鼠标点击查看源码，查看的只是一个html中的渲染id和几行js。</p>
+<p>7.使用antd-mobile，这个是蚂蚁金服出的一款reactUi组件，也有RN版本的，也有PC站版本的，里面封装了许多的交互效果和组件，虽然也是踩了许多许多的坑，例如配置的时候就坑了我好久，里面的文档也不是很详细，但是毕竟才出来一年左右，还是要鼓励一下，有些交互组件完全可以用里面的，整个手机站看起来很优雅，就像是APP一样，高端。但是一定要有踩坑的准备，这个坑一定要迈过去就好。</p>
+<p>8.还没试过在配合node使用react，下次有机会试一波。</p>
+<h3 id="关于react"><a href="#关于react" class="headerlink" title="关于react"></a>关于react</h3><p>react推崇的是Function-&gt;class-&gt;create<br>大概是这个样式，Function指的是函数，class指的的类，create指的的原生创建。并且无状态组件是react现在推崇要求的，在无需状态的情况下，尽量将组件抽取出来变成react无状态组件，只是让它单纯的处理数据的展示和渲染。就像是redux里面的实现方法一样，抽出带有数据和状态的组件，放入components里面叫做容器组件，抽取出简单的组件渲染，称为展示组件。这点的好处就是逻辑出问题了，进容器组件里面找，不会有除了数据和逻辑无关的存在。就是一种各管各的形式。</p>
+<h3 id="关于webpack"><a href="#关于webpack" class="headerlink" title="关于webpack"></a>关于webpack</h3><p>webpack最近的势头很是勇猛，发布了webpack3.0，我都还没有看过3.0的文档。毕竟2.0的中文文档貌似好心人都没有翻译全。之前使用的webpack的时候1.0，升级到2.0之后，里面的许多语法都是进行了更改，踩坑的时候也是非常的痛苦。如果要进行前端构建，一个打包工具是必要的，它可以加快你的开发速度，提高代码的质量。但是webpack这一门学问很深，至今都没有研究过，只是会用而已。并且配置一个好的webpack之后，可以说是一劳永逸。对于整个代码版本的更迭都是能够顺利许多。</p>
+<h3 id="关于antd"><a href="#关于antd" class="headerlink" title="关于antd"></a>关于antd</h3><p>antd蚂蚁金服的reactUI组件，react的UI组件并不多，更何况是大厂出的UI组件，自然是一头扎进去。虽然也是碰了许多坑，但是也是加快了许多的开发速度，最起码一些交互效果和组件不需要自己写了，加上Webpack配置好的按需加载，并不会有许多的组件一起被打包进来，只是单纯的使用到的组件被打包进来而已。有空也是想试试antd的PC版和RN版。</p>
+<h3 id="关于react-router-dom"><a href="#关于react-router-dom" class="headerlink" title="关于react-router-dom"></a>关于react-router-dom</h3><p>这个可以说是差点把我坑的怀疑人生。不管什么资源包和语言升级之后总是会剥离一些之前包含的功能或者融合一些新的功能，或者更改一些新的语法。就像是react-router-dom,此处很伤心，不想说怎么给坑的，想让其他人也被坑一下，我心里才平衡。</p>
+<h3 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h3><p>总结一下就是，不要乱设置只读属性，组件移除之后消除一些异步请求和操作状态的函数。然后减少直接操作DOM，反正我这个项目下来我没操作过一个DOM。循环一些数据的时候记得加key,展示组建中不要写操作状态和数据的函数，统统写在父容器组件中。fetch请求的时候要引入编译包“whatwg-fetch”，不然低版本浏览器不兼容。命名一定要规范，注释一定要写，说明文档一定要写。代码要有扩展性，结构要有扩展性，不管多小的项目一定要按照大项目的规范写，避免以后拓展功能的时候代码冗余高得重构。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/06/27/react-antd-mobile-react-router踩过的坑/" class="archive-article-date">
+  	<time datetime="2017-06-27T06:41:43.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-06-27</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/31/antd-mobile-react-webpack配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">&#39;antd-mobile+react+webpack配置&#39;</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 渣端
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="/">暂无链接</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
