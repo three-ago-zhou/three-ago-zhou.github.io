@@ -14,12 +14,12 @@
 <meta property="og:url" content="https://three-ago-zhou.github.io/2017/06/27/react-antd-mobile-react-router踩过的坑/index.html">
 <meta property="og:site_name" content="周三岁">
 <meta property="og:description" content="独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验">
-<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk6.jpg">
-<meta property="og:updated_time" content="2017-06-27T07:38:35.461Z">
+<meta property="og:image" content="https://three-ago-zhou.github.io/images/bgk12jpg">
+<meta property="og:updated_time" content="2017-06-27T07:40:54.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="'react+antd-mobile+react-router踩过的坑'">
 <meta name="twitter:description" content="独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验">
-<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk6.jpg">
+<meta name="twitter:image" content="https://three-ago-zhou.github.io/images/bgk12jpg">
   
     <link rel="alternative" href="/atom.xml" title="周三岁" type="application/atom+xml">
   
@@ -137,7 +137,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/images/bgk6.jpg" alt="img"><br>独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验<br><a id="more"></a></p>
+        <p><img src="/images/bgk12jpg" alt="img"><br>独自使用react和antd-mobile开发了一个简单的移动端项目，并没有复杂的逻辑和杂乱的数据整理，所以整个项目很简单，开发完也就用了一个星期，但是后期的优化和代码整合却是花了一个星期。细说这个小项目中踩过的坑和总结的一些经验<br><a id="more"></a></p>
 <h3 id="关于整个项目的总结"><a href="#关于整个项目的总结" class="headerlink" title="关于整个项目的总结"></a>关于整个项目的总结</h3><p>使用了react和webpack以及antd-mobile之后。最先明了的就是前后端分离了，后台只需要提供数据接口就行，并不需要去思考数据的展示逻辑和各种搜索的逻辑，让后台也是能够轻松下来，更好的去面对那些庞大严谨的数据逻辑。所有的get和post数据都通过ajax。</p>
 <p>1.开发前，前端和后台必须定义好返回数据的接口以及各种说明文档，这样能够加快速度。我因为略懂一点php语法，所以后台跟我进行了简单的数据接口的说明，并能够立即的开发，发现一些可以优化的数据接口，也是能够自己去修改接口。所以前端必须要懂后台的语言，纯前端的路走不远，终究会被淘汰。</p>
 <p>2.必要时对一些数据写死，减少ajax的请求数量，每个网页都是有他的死数据，这类的数据完全可以写死在一个js里面，然后通过react的props进行数据的传递。</p>
